@@ -29,45 +29,6 @@ The program uses logic to determine **who the real culprit is**.
 
 ---
 
-## 📂 Code Example
-
-```python
-class Sherlock:
-    def __init__(self):
-        self.suspects = {
-            "Suspect A": "Suspect B did it.",
-            "Suspect B": "Suspect C is lying.",
-            "Suspect C": "I am innocent."
-        }
-
-    def deduce_truth(self):
-        for suspect, statement in self.suspects.items():
-            if self.is_truthful(suspect):
-                culprit = self.evaluate_statement(statement)
-                print(f"{suspect} is telling the truth. Therefore, the culprit is {culprit}.")
-                return
-
-    def is_truthful(self, suspect):
-        statements = {
-            "Suspect A": self.suspects["Suspect B"] == "I am innocent.",
-            "Suspect B": self.suspects["Suspect C"] == "Suspect C is lying.",
-            "Suspect C": False,
-        }
-        return sum(statements.values()) == 1 and statements[suspect]
-
-    def evaluate_statement(self, statement):
-        if "did it" in statement:
-            return statement.split()[0]
-        elif "lying" in statement:
-            return "Suspect C"
-        elif "innocent" in statement:
-            return "Suspect C"
-        return "Unknown"
-
-
-sherlock = Sherlock()
-sherlock.deduce_truth()
-
 # Clone the repo
 git clone https://github.com/your-username/sherlock-puzzle.git
 cd sherlock-puzzle
