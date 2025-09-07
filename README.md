@@ -30,7 +30,7 @@ The program uses logic to determine **who the real culprit is**.
 ---
 
 # Clone the repo
-git clone https://github.com/your-username/sherlock-puzzle.git
+git clone https://github.com/DDharm007/Sherlock-Logic-Puzzle.git
 cd sherlock-puzzle
 
 # Run the script
